@@ -23,8 +23,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - name: screen resolution
+      - name: default screen resolution
+        run: system_profiler SPDisplaysDataType | grep Resolution
+
+          
+      - name: change screen resolution
         run: |
-          system_profiler SPDisplaysDataType | grep Resolution
           "/Library/Application Support/VMware Tools/vmware-resolutionSet" 2560 1440
-          system_profiler SPDisplaysDataType | grep Resolution
+          
+          
+      - name: new screen resolution
+        run: system_profiler SPDisplaysDataType | grep Resolution
+        
+        
