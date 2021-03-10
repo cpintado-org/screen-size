@@ -29,7 +29,7 @@ jobs:
           
       - name: change screen resolution
         run: |
-          "/Library/Application Support/VMware Tools/vmware-resolutionSet" 2560 1440
+          "/Library/Application Support/VMware Tools/vmware-resolutionSet" 1080 2160
           
           
       - name: new screen resolution
